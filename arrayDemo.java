@@ -1,14 +1,19 @@
 import java.util.Scanner;
 public class arrayDemo {
 	
+	static void swap(int[] a, int i, int j) {
+		int val;
+		val = a[i];
+		a[i] = a[j];
+		a[j] = val;
+	}
+	
 	static int[] sort(int[] a) {
 		int val;
 		for (int i = 0; i < a.length - 1; i++) {
 			for (int j = i+1; j < a.length; j++) {
 				if (a[i] > a[j]) {
-					val = a[i];
-					a[i] = a[j];
-					a[j] = val;
+					swap(a,i,j);
 				}
 			}
 		}
